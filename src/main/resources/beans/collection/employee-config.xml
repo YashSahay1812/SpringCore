@@ -6,7 +6,7 @@
          https://www.springframework.org/schema/beans/spring-beans.xsd"
 >
 
-    <bean class="com.yash.Employee" name="employee1">
+    <bean class="com.yash.beans.collection.Employee" name="employee1">
         <property name="name" value="Yash"/>
         <property name="phones">
             <list>

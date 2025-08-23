@@ -1,4 +1,4 @@
-package com.yash;
+package com.yash.beans.collection;
 
 import java.util.List;
 import java.util.Map;

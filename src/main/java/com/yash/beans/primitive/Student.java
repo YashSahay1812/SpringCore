@@ -1,4 +1,4 @@
-package com.yash;
+package com.yash.beans.primitive;
 
 public class Student {
     private int id;
