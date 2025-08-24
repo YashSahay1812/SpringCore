@@ -10,6 +10,15 @@ public class Employee {
     private Set<String> addresses;
     private Map<String, String> courses;
 
+    public Employee() {}
+
+    public Employee(String name, List<String> phones, Set<String> addresses, Map<String, String> courses) {
+        this.name = name;
+        this.phones = phones;
+        this.addresses = addresses;
+        this.courses = courses;
+    }
+
     public void setName(String name) {
         this.name = name;
     }

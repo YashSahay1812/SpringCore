@@ -5,6 +5,14 @@ public class Address {
     private String state;
     private String city;
 
+    public Address() {}
+
+    public Address(String country, String state, String city) {
+        this.country = country;
+        this.state = state;
+        this.city = city;
+    }
+
     public void setCountry(String country) {
         this.country = country;
     }

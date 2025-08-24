@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="
+         http://www.springframework.org/schema/beans
+         https://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+
+    <bean
+        class="com.yash.beans.reference.Address"
+        name="addressC1"
+        c:_0="India"
+        c:_1="Bihar"
+        c:_2="Sasaram"
+    />
+
+    <!-- Traditional Verbose Definition -->
+    <bean class="com.yash.beans.reference.Person" name="personC1">
+        <constructor-arg>
+            <value>Yash</value>
+        </constructor-arg>
+        <constructor-arg>
+            <ref bean="addressC1" />
+        </constructor-arg>
+    </bean>
+
+    <!-- Value Attribute Definition -->
+    <bean class="com.yash.beans.reference.Person" name="personC2">
+        <constructor-arg value="Vaibhav" />
+        <constructor-arg ref="addressC1" />
+    </bean>
+
+    <!-- C-Schema Definition -->
+    <bean
+        class="com.yash.beans.reference.Person"
+        name="personC3"
+        c:name="Abhyuday"
+        c:address-ref="addressC1"
+    />
+
+</beans>

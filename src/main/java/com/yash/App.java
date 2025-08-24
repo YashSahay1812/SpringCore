@@ -11,10 +11,15 @@ public class App
     public static void main( String[] args )
     {
         ApplicationContext context = new ClassPathXmlApplicationContext(new String[] {
-            "beans/primitive/student-config.xml",
-            "beans/collection/employee-config.xml",
-            "beans/reference/person-config.xml"
+                "beans/setter-injection/primitive/student-config.xml",
+                "beans/setter-injection/collection/employee-config.xml",
+                "beans/setter-injection/reference/person-config.xml",
+                "beans/constructor-injection/collection/employee-config.xml",
+                "beans/constructor-injection/reference/person-config.xml"
         });
+
+        System.out.println("***************** Setter Injection ******************");
+        System.out.println(" ");
 
         // PrimitiveType Beans :
         Student s1 = (Student) context.getBean("student1");
@@ -39,6 +44,24 @@ public class App
         System.out.println(p1);
         System.out.println(p2);
         System.out.println(p3);
+
+        System.out.println(" ");
+        System.out.println("****************** Constructor Injection *******************");
+        System.out.println(" ");
+
+        // CollectionType Beans :
+        Employee ec1 = (Employee) context.getBean("employeeC1");
+        System.out.println(ec1);
+
+        System.out.println("-----------------------------------------------------------");
+
+        // ReferenceType Beans :
+        Person pc1 = (Person) context.getBean("personC1");
+        Person pc2 = (Person) context.getBean("personC2");
+        Person pc3 = (Person) context.getBean("personC3");
+        System.out.println(pc1);
+        System.out.println(pc2);
+        System.out.println(pc3);
 
     }
 }
