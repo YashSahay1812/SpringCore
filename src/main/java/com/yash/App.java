@@ -1,6 +1,7 @@
 package com.yash;
 
 import com.yash.beans.collection.Employee;
+import com.yash.beans.constructorinjectionambiguity.BinaryAdder;
 import com.yash.beans.primitive.Student;
 import com.yash.beans.reference.Person;
 import org.springframework.context.ApplicationContext;
@@ -15,7 +16,8 @@ public class App
                 "beans/setter-injection/collection/employee-config.xml",
                 "beans/setter-injection/reference/person-config.xml",
                 "beans/constructor-injection/collection/employee-config.xml",
-                "beans/constructor-injection/reference/person-config.xml"
+                "beans/constructor-injection/reference/person-config.xml",
+                "beans/constructor-injection/ambiguity/binary-adder-config.xml"
         });
 
         System.out.println("***************** Setter Injection ******************");
@@ -63,5 +65,8 @@ public class App
         System.out.println(pc2);
         System.out.println(pc3);
 
+        // Resolving Ambiguity in Constructor Injection
+        BinaryAdder adder = (BinaryAdder) context.getBean("adder");
+        System.out.println(adder);
     }
 }
