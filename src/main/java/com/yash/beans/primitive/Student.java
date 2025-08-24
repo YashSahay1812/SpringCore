@@ -17,6 +17,14 @@ public class Student {
         this.address = address;
     }
 
+    public void init() {
+        System.out.println("Student bean has been initialized : " + this);
+    }
+
+    public void destroy() {
+        System.out.println("Student bean is about to be destroyed : " + this);
+    }
+
     @Override
     public String toString() {
         return "Student{" +

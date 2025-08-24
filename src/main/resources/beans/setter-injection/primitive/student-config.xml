@@ -8,7 +8,12 @@
 >
 
     <!-- Tradition way to define Bean -->
-    <bean class="com.yash.beans.primitive.Student" name="student1">
+    <bean
+        class="com.yash.beans.primitive.Student"
+        name="student1"
+        init-method="init"
+        destroy-method="destroy"
+    >
         <property name="id">
             <value>9</value>
         </property>
@@ -34,6 +39,8 @@
         p:id="3"
         p:name="Sourav"
         p:address="Ranchi"
+        init-method="init"
+        destroy-method="destroy"
     />
 
 
