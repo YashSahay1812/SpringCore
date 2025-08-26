@@ -9,7 +9,7 @@
 
     <bean
         class="com.yash.beans.autowiring.Address"
-        id="address"
+        id="address1"
         p:country="India"
         p:state="Jharkhand"
         p:city="Jamshedpur"
