@@ -1,6 +1,9 @@
 package com.yash.beans.primitive;
 
-public class Student {
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Student implements InitializingBean, DisposableBean {
     private int id;
     private String name;
     private String address;
@@ -21,8 +24,14 @@ public class Student {
         System.out.println("Student bean has been initialized : " + this);
     }
 
+    @Override
     public void destroy() {
         System.out.println("Student bean is about to be destroyed : " + this);
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("Student bean has been initialized : " + this);
     }
 
     @Override
