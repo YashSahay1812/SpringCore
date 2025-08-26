@@ -16,6 +16,14 @@
     />
 
     <bean
+        class="com.yash.beans.autowiring.Address"
+        id="address2"
+        p:country="India"
+        p:state="Jharkhand"
+        p:city="Ranchi"
+    />
+
+    <bean
         class="com.yash.beans.autowiring.Person"
         id="person1"
         p:name="Yash"
