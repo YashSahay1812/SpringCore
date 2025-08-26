@@ -1,5 +1,7 @@
 package com.yash.beans.primitive;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 
@@ -20,11 +22,13 @@ public class Student implements InitializingBean, DisposableBean {
         this.address = address;
     }
 
+    @PostConstruct
     public void init() {
         System.out.println("Student bean has been initialized : " + this);
     }
 
     @Override
+    @PreDestroy
     public void destroy() {
         System.out.println("Student bean is about to be destroyed : " + this);
     }
