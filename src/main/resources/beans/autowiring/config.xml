@@ -19,7 +19,7 @@
         class="com.yash.beans.autowiring.Person"
         id="person1"
         p:name="Yash"
-        autowire="byName"
+        autowire="byType"
     />
 
 </beans>
