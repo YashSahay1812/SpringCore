@@ -3,10 +3,15 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
        xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="
          http://www.springframework.org/schema/beans
-         https://www.springframework.org/schema/beans/spring-beans.xsd"
+         https://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context
+         https://www.springframework.org/schema/context/spring-context.xsd"
 >
+
+    <context:annotation-config />
 
     <bean
         class="com.yash.beans.autowiring.Address"
@@ -17,18 +22,19 @@
     />
 
     <bean
-        class="com.yash.beans.autowiring.Address"
-        id="address2"
-        p:country="India"
-        p:state="Jharkhand"
-        p:city="Jamshedpur"
-    />
-
-    <bean
         class="com.yash.beans.autowiring.Person"
         id="person1"
         c:_0="Yash"
-        autowire="constructor"
+    >
+        <constructor-arg index="1">
+            <null/>
+        </constructor-arg>
+    </bean>
+
+    <bean
+        class="com.yash.beans.autowiring.Person"
+        id="person2"
+        p:name="Sahay"
     />
 
 </beans>

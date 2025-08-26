@@ -1,7 +1,11 @@
 package com.yash.beans.autowiring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Person {
     private String name;
+
+    @Autowired
     private Address address;
 
     public Person() {}

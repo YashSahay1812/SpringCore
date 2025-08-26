@@ -12,7 +12,9 @@ public class AppAutowiring {
                 "beans/autowiring/config.xml");
 
         Person p1 = (Person) context.getBean("person1");
+        Person p2 = (Person) context.getBean("person2");
         System.out.println(p1);
+        System.out.println(p2);
 
     }
 
