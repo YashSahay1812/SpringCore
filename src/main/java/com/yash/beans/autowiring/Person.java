@@ -20,6 +20,7 @@ public class Person {
         this.name = name;
     }
 
+    @Autowired
     public void setAddress(Address address) {
         System.out.println("Setter gets invoked");
         this.address = address;
