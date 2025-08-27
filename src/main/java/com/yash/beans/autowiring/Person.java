@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class Person {
     private String name;
 
-    @Autowired
     private Address address;
 
     public Person() {}
@@ -20,6 +19,7 @@ public class Person {
         this.name = name;
     }
 
+    @Autowired
     public void setAddress(Address address) {
         System.out.println("Setter gets invoked");
         this.address = address;
