@@ -9,6 +9,7 @@ public class Person {
 
     public Person() {}
 
+    @Autowired
     public Person(String name, Address address) {
         System.out.println("Constructor gets invoked");
         this.name = name;
@@ -19,7 +20,6 @@ public class Person {
         this.name = name;
     }
 
-    @Autowired
     public void setAddress(Address address) {
         System.out.println("Setter gets invoked");
         this.address = address;

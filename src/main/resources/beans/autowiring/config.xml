@@ -42,7 +42,7 @@
     <bean
         class="com.yash.beans.autowiring.Person"
         id="person2"
-        p:name="Sahay"
+        c:_0="Sahay"
     />
 
 </beans>
