@@ -9,7 +9,7 @@ public class Person {
 
     public Person() {}
 
-    @Autowired
+    @Autowired(required = false)
     public Person(String name, Address address) {
         System.out.println("Constructor gets invoked");
         this.name = name;
