@@ -17,7 +17,7 @@
     <context:annotation-config />
 
     <!-- Standalone Set -->
-    <util:set id="phones">
+    <util:set id="phones" set-class="java.util.HashSet">
         <value>+91 9876543210</value>
         <value>+91 9753102468</value>
     </util:set>

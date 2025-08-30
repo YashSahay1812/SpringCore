@@ -13,6 +13,14 @@ public class Employee {
         this.phones = phones;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public Set<String> getPhones() {
+        return phones;
+    }
+
     public void setName(String name) {
         this.name = name;
     }

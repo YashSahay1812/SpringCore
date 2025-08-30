@@ -13,7 +13,9 @@ public class AppStandaloneCollection {
         Employee e1 = context.getBean("employee1", Employee.class);
         Employee e2 = context.getBean("employee2", Employee.class);
         System.out.println(e1);
+        System.out.println(e1.getPhones().getClass().getName());
         System.out.println(e2);
+        System.out.println(e2.getPhones().getClass().getName());
     }
 
 }
