@@ -8,7 +8,7 @@ public class AppStereotypeAnnotation {
     public static void main(String[] args) {
         final ApplicationContext context = new ClassPathXmlApplicationContext(
                 "beans/stereotype-annotation/config.xml");
-        Employee e1 = context.getBean("employee", Employee.class);
+        Employee e1 = context.getBean("emp", Employee.class);
         System.out.println(e1);
     }
 }

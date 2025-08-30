@@ -16,4 +16,10 @@
 
     <context:component-scan base-package="com.yash.beans.stereotype" />
 
+    <!-- Standalone Set -->
+    <util:set id="phones">
+        <value>+91 9876543210</value>
+        <value>+91 9753102468</value>
+    </util:set>
+
 </beans>
