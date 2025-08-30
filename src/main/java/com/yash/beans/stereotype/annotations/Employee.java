@@ -1,5 +1,7 @@
 package com.yash.beans.stereotype.annotations;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +13,8 @@ public class Employee {
     @Value("Yash")
     private String name;
 
-    @Value("#{phones}")
+    @Autowired
+    @Qualifier("phones")
     private Set<String> phones;
 
     public Employee() {
