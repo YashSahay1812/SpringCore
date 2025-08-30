@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+         http://www.springframework.org/schema/beans
+         https://www.springframework.org/schema/beans/spring-beans.xsd
+         http://www.springframework.org/schema/context
+         https://www.springframework.org/schema/context/spring-context.xsd
+         http://www.springframework.org/schema/util
+         https://www.springframework.org/schema/util/spring-util.xsd"
+>
+
+    <context:annotation-config />
+
+    <!-- Standalone Set -->
+    <util:set id="phones">
+        <value>+91 9876543210</value>
+        <value>+91 9753102468</value>
+    </util:set>
+
+    <bean
+        class="com.yash.beans.standalone.collection.Employee"
+        id="employee1"
+        p:name="Yash"
+        p:phones-ref="phones"
+    />
+
+    <bean
+        class="com.yash.beans.standalone.collection.Employee"
+        id="employee2"
+        c:_0="Sahay"
+        c:_1-ref="phones"
+    />
+
+</beans>
