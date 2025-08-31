@@ -1,5 +1,10 @@
 package com.yash.beans.scope;
 
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component("address1")
+@Scope("prototype")
 public class Address {
     private String country;
     private String state;
